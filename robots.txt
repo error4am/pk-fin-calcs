@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pk-fincalcs.github.io/sitemap.xml
+Sitemap: https://error4am.github.io/pk-fin-calcs/sitemap.xml
