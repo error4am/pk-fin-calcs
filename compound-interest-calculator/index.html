@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compound Interest Calculator Pakistan 2026 — Free Online Tool</title>
+  <meta name="description" content="Free compound interest calculator for Pakistan. See how your savings grow with monthly, quarterly, or yearly compounding in PKR. Updated for 2026.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pk-fincalcs.github.io/compound-interest-calculator/">
+
+  <meta property="og:title" content="Compound Interest Calculator Pakistan 2026 — Free Online Tool">
+  <meta property="og:description" content="Calculate compound interest on your savings in PKR. Free, instant, no data stored.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pk-fincalcs.github.io/compound-interest-calculator/">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Compound Interest Calculator Pakistan 2026">
+  <meta name="twitter:description" content="Calculate compound interest on your savings in PKR. Free and instant.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="logo">PK<span>FinCalcs</span></a>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/emi-calculator/">EMI</a></li>
+          <li><a href="/salary-tax-calculator/">Tax</a></li>
+          <li><a href="/compound-interest-calculator/" aria-current="page">Interest</a></li>
+          <li><a href="/home-loan-calculator/">Home Loan</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Compound Interest Calculator Pakistan 2026</h1>
+      <p>See how your savings grow with compound interest. Supports monthly, quarterly, half-yearly, and yearly compounding in PKR.</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="calc-card">
+      <h2>Calculate Compound Interest</h2>
+
+      <div class="quick-fills">
+        <button class="quick-fill-btn" onclick="fillCompound(100000, 12, 10, 12)">1 Lakh / 12% / 10yr</button>
+        <button class="quick-fill-btn" onclick="fillCompound(500000, 10, 5, 4)">5 Lakh / 10% / 5yr</button>
+        <button class="quick-fill-btn" onclick="fillCompound(1000000, 14, 15, 12)">10 Lakh / 14% / 15yr</button>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="principal">Principal Amount (PKR)</label>
+          <input type="number" id="principal" placeholder="e.g. 100000" min="0">
+        </div>
+        <div class="form-group">
+          <label for="rate">Annual Interest Rate (%)</label>
+          <input type="number" id="rate" placeholder="e.g. 12" min="0" max="100" step="0.01">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="years">Time Period (Years)</label>
+          <input type="number" id="years" placeholder="e.g. 10" min="1" max="100">
+        </div>
+        <div class="form-group">
+          <label for="frequency">Compounding Frequency</label>
+          <select id="frequency">
+            <option value="12">Monthly (12x/year)</option>
+            <option value="4">Quarterly (4x/year)</option>
+            <option value="2">Half-Yearly (2x/year)</option>
+            <option value="1">Yearly (1x/year)</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="btn" onclick="handleCompoundInterest()">Calculate</button>
+
+      <div id="results" class="results">
+        <h3>Compound Interest Results</h3>
+        <div class="result-grid">
+          <div class="result-item">
+            <div class="label">Total Amount</div>
+            <div class="value" id="result-amount">—</div>
+          </div>
+          <div class="result-item">
+            <div class="label">Interest Earned</div>
+            <div class="value" id="result-interest-earned">—</div>
+          </div>
+          <div class="result-item">
+            <div class="label">Interest as % of Principal</div>
+            <div class="value" id="result-interest-pct">—</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <h2>What Is Compound Interest?</h2>
+      <p>Compound interest is interest calculated on both the initial principal and the accumulated interest from previous periods. Unlike simple interest, which is only calculated on the principal, compound interest grows your money faster over time.</p>
+
+      <h2>Compound Interest Formula</h2>
+      <p>The formula is: A = P(1 + r/n)^(nt), where A is the final amount, P is the principal, r is the annual interest rate, n is the compounding frequency per year, and t is the time in years.</p>
+
+      <h2>Why Compounding Frequency Matters</h2>
+      <ul>
+        <li><strong>Monthly compounding</strong> earns slightly more than yearly because interest is calculated and added 12 times per year.</li>
+        <li><strong>Quarterly compounding</strong> adds interest every 3 months.</li>
+        <li><strong>Yearly compounding</strong> calculates interest once per year, giving the lowest total for the same rate.</li>
+      </ul>
+      <p>In Pakistan, bank savings accounts typically compound monthly or quarterly. Fixed deposit accounts (FDIs) usually compound quarterly or at maturity.</p>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <button class="faq-question">What is the difference between compound and simple interest?</button>
+        <div class="faq-answer">Simple interest is calculated only on the original principal amount. Compound interest is calculated on the principal plus any accumulated interest. Over time, compound interest grows your money significantly faster.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Which banks in Pakistan offer compound interest on savings?</button>
+        <div class="faq-answer">Most Pakistani banks offer compound interest on savings accounts and fixed deposits. Ask your bank about the compounding frequency for your specific account type.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Is monthly compounding always better?</button>
+        <div class="faq-answer">For the same annual rate, more frequent compounding gives a slightly higher return. However, the difference between monthly and quarterly compounding is small compared to the impact of the interest rate itself.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How can I maximize compound interest on my savings?</button>
+        <div class="faq-answer">Start early, choose accounts with higher rates, prefer monthly compounding when available, and reinvest interest earned rather than withdrawing it. Time is the most powerful factor in compound growth.</div>
+      </div>
+
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the difference between compound and simple interest?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Simple interest is calculated only on the original principal amount. Compound interest is calculated on the principal plus any accumulated interest. Over time, compound interest grows your money significantly faster."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which banks in Pakistan offer compound interest on savings?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most Pakistani banks offer compound interest on savings accounts and fixed deposits. Ask your bank about the compounding frequency for your specific account type."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is monthly compounding always better?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For the same annual rate, more frequent compounding gives a slightly higher return. However, the difference between monthly and quarterly compounding is small compared to the impact of the interest rate itself."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I maximize compound interest on my savings?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Start early, choose accounts with higher rates, prefer monthly compounding when available, and reinvest interest earned rather than withdrawing it. Time is the most powerful factor in compound growth."
+            }
+          }
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <h2>Related Calculators</h2>
+      <div class="cards-grid">
+        <a href="/emi-calculator/" class="card">
+          <div class="icon">&#9673;</div>
+          <h3>EMI Calculator</h3>
+          <p>Calculate your monthly loan EMI in PKR for any loan type.</p>
+        </a>
+        <a href="/home-loan-calculator/" class="card">
+          <div class="icon">&#9751;</div>
+          <h3>Home Loan Calculator</h3>
+          <p>Plan your home purchase with detailed EMI and down payment breakdown.</p>
+        </a>
+        <a href="/salary-tax-calculator/" class="card">
+          <div class="icon">&#8377;</div>
+          <h3>Salary Tax Calculator 2026</h3>
+          <p>Find your monthly and annual tax and take-home pay.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/emi-calculator/">EMI Calculator</a></li>
+        <li><a href="/salary-tax-calculator/">Salary Tax Calculator</a></li>
+        <li><a href="/compound-interest-calculator/">Compound Interest</a></li>
+        <li><a href="/home-loan-calculator/">Home Loan Calculator</a></li>
+      </ul>
+      <p>PK FinCalcs &mdash; Free Pakistan financial calculators. Updated for 2026.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/calculators.js"></script>
+</body>
+</html>

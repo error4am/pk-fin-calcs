@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pk-fincalcs.github.io/sitemap.xml

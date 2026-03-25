@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Loan Calculator Pakistan 2026 — EMI with Down Payment</title>
+  <meta name="description" content="Free home loan calculator for Pakistan. Calculate EMI with down payment breakdown for property purchases in PKR. Includes total interest and payment schedule info. Updated 2026.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pk-fincalcs.github.io/home-loan-calculator/">
+
+  <meta property="og:title" content="Home Loan Calculator Pakistan 2026 — EMI with Down Payment">
+  <meta property="og:description" content="Plan your home purchase with a detailed EMI breakdown including down payment and total interest in PKR.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pk-fincalcs.github.io/home-loan-calculator/">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Home Loan Calculator Pakistan 2026">
+  <meta name="twitter:description" content="Plan your home purchase with a detailed EMI breakdown including down payment and total interest in PKR.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="logo">PK<span>FinCalcs</span></a>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/emi-calculator/">EMI</a></li>
+          <li><a href="/salary-tax-calculator/">Tax</a></li>
+          <li><a href="/compound-interest-calculator/">Interest</a></li>
+          <li><a href="/home-loan-calculator/" aria-current="page">Home Loan</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Home Loan Calculator Pakistan 2026</h1>
+      <p>Plan your home purchase with a complete EMI breakdown including property price, down payment, loan amount, and total interest paid in PKR.</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="calc-card">
+      <h2>Home Loan EMI Calculator</h2>
+
+      <div class="quick-fills">
+        <button class="quick-fill-btn" onclick="fillHomeLoan(5000000, 30, 18, 20)">50 Lakh / 30% down</button>
+        <button class="quick-fill-btn" onclick="fillHomeLoan(10000000, 25, 17, 25)">1 Crore / 25% down</button>
+        <button class="quick-fill-btn" onclick="fillHomeLoan(15000000, 20, 16, 30)">1.5 Crore / 20% down</button>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="propertyPrice">Property Price (PKR)</label>
+          <input type="number" id="propertyPrice" placeholder="e.g. 10000000" min="0">
+        </div>
+        <div class="form-group">
+          <label for="downPayment">Down Payment (%)</label>
+          <input type="number" id="downPayment" placeholder="e.g. 25" min="0" max="100" step="1" value="25">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="interestRate">Interest Rate (% per year)</label>
+          <input type="number" id="interestRate" placeholder="e.g. 18" min="0" max="100" step="0.01">
+        </div>
+        <div class="form-group">
+          <label for="loanTenure">Loan Tenure (Years)</label>
+          <input type="number" id="loanTenure" placeholder="e.g. 20" min="1" max="50">
+        </div>
+      </div>
+
+      <button class="btn" onclick="handleHomeLoan()">Calculate Home Loan EMI</button>
+
+      <div id="results" class="results">
+        <h3>Home Loan Breakdown</h3>
+        <div class="result-grid">
+          <div class="result-item">
+            <div class="label">Loan Amount</div>
+            <div class="value" id="result-loan-amount">—</div>
+          </div>
+          <div class="result-item">
+            <div class="label">Down Payment</div>
+            <div class="value" id="result-down-payment">—</div>
+          </div>
+          <div class="result-item">
+            <div class="label">Monthly EMI</div>
+            <div class="value" id="result-emi">—</div>
+          </div>
+          <div class="result-item">
+            <div class="label">Total Payment</div>
+            <div class="value" id="result-total-payment">—</div>
+          </div>
+          <div class="result-item">
+            <div class="label">Total Interest</div>
+            <div class="value" id="result-total-interest">—</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <h2>How Pakistan Home Loans Work</h2>
+      <p>Pakistani banks typically finance 70-80% of the property value as a home loan. The remaining 20-30% is your down payment. Loan tenures usually range from 5 to 25 years, and interest rates vary from 15% to 22% depending on the bank and your credit profile.</p>
+
+      <h2>Key Things to Consider</h2>
+      <ul>
+        <li><strong>Down payment:</strong> A higher down payment reduces your loan amount and total interest. Most banks require at least 20-30%.</li>
+        <li><strong>Interest rate:</strong> Compare rates from multiple banks. Even a 1% difference can save lakhs in total interest.</li>
+        <li><strong>Loan tenure:</strong> Longer tenure means lower EMI but much higher total interest. Find a balance you can afford.</li>
+        <li><strong>Processing fees:</strong> Banks charge 1-2% of the loan amount as processing fee. Factor this into your budget.</li>
+        <li><strong>Insurance:</strong> Some banks require property insurance or life insurance linked to the loan.</li>
+      </ul>
+
+      <h2>Who Can Get a Home Loan in Pakistan?</h2>
+      <p>Most Pakistani banks require you to be a salaried or self-employed individual with a stable income, aged 21-65, with a minimum income threshold. Government employees and employees of reputable organizations usually get easier approval.</p>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <button class="faq-question">What is the minimum down payment for a home loan in Pakistan?</button>
+        <div class="faq-answer">Most Pakistani banks require a minimum down payment of 20-30% of the property value. Some Islamic banks may have different requirements. A higher down payment usually means better loan terms.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What is the maximum home loan tenure in Pakistan?</button>
+        <div class="faq-answer">Home loan tenures in Pakistan typically range from 5 to 25 years. Some banks offer up to 30 years for certain applicants. Longer tenures reduce monthly EMI but increase total interest paid.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Can I get a home loan for an under-construction property?</button>
+        <div class="faq-answer">Yes. Many Pakistani banks offer construction-linked home loans where the disbursement is tied to construction milestones. The EMI usually starts after full disbursement or a specified moratorium period.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What documents do I need for a home loan in Pakistan?</button>
+        <div class="faq-answer">Typically you need: CNIC, salary slips or income proof, bank statements (6-12 months), property documents (registry, allotment letter), and employer letter. Requirements vary by bank.</div>
+      </div>
+
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the minimum down payment for a home loan in Pakistan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most Pakistani banks require a minimum down payment of 20-30% of the property value. Some Islamic banks may have different requirements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the maximum home loan tenure in Pakistan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Home loan tenures in Pakistan typically range from 5 to 25 years. Some banks offer up to 30 years for certain applicants."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I get a home loan for an under-construction property?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Many Pakistani banks offer construction-linked home loans where the disbursement is tied to construction milestones."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What documents do I need for a home loan in Pakistan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Typically you need: CNIC, salary slips or income proof, bank statements (6-12 months), property documents, and employer letter."
+            }
+          }
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <h2>Related Calculators</h2>
+      <div class="cards-grid">
+        <a href="/emi-calculator/" class="card">
+          <div class="icon">&#9673;</div>
+          <h3>EMI Calculator</h3>
+          <p>Calculate your monthly loan EMI in PKR for any loan type.</p>
+        </a>
+        <a href="/salary-tax-calculator/" class="card">
+          <div class="icon">&#8377;</div>
+          <h3>Salary Tax Calculator 2026</h3>
+          <p>Find your take-home pay after Pakistan income tax deductions.</p>
+        </a>
+        <a href="/compound-interest-calculator/" class="card">
+          <div class="icon">&#8634;</div>
+          <h3>Compound Interest Calculator</h3>
+          <p>See how your savings grow over time with compound interest.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/emi-calculator/">EMI Calculator</a></li>
+        <li><a href="/salary-tax-calculator/">Salary Tax Calculator</a></li>
+        <li><a href="/compound-interest-calculator/">Compound Interest</a></li>
+        <li><a href="/home-loan-calculator/">Home Loan Calculator</a></li>
+      </ul>
+      <p>PK FinCalcs &mdash; Free Pakistan financial calculators. Updated for 2026.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/calculators.js"></script>
+</body>
+</html>

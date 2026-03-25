@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free EMI Calculator Pakistan 2026 — Calculate Loan EMI in PKR</title>
+  <meta name="description" content="Free EMI calculator for Pakistan loans. Calculate monthly EMI for home, car, and personal loans in PKR. Supports any interest rate and tenure. Updated 2026.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pk-fincalcs.github.io/emi-calculator/">
+
+  <meta property="og:title" content="Free EMI Calculator Pakistan 2026 — Calculate Loan EMI in PKR">
+  <meta property="og:description" content="Calculate your monthly EMI for home, car, and personal loans in PKR. Free, instant, no data stored.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pk-fincalcs.github.io/emi-calculator/">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Free EMI Calculator Pakistan 2026">
+  <meta name="twitter:description" content="Calculate your monthly EMI for any loan in PKR. Free and instant.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="logo">PK<span>FinCalcs</span></a>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/emi-calculator/" aria-current="page">EMI</a></li>
+          <li><a href="/salary-tax-calculator/">Tax</a></li>
+          <li><a href="/compound-interest-calculator/">Interest</a></li>
+          <li><a href="/home-loan-calculator/">Home Loan</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Free EMI Calculator Pakistan 2026</h1>
+      <p>Calculate your Equated Monthly Installment for any loan in PKR. Works for home loans, car loans, personal loans, and business financing.</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="calc-card">
+      <h2>Loan EMI Calculator</h2>
+
+      <div class="quick-fills">
+        <button class="quick-fill-btn" onclick="fillEMI(3000000, 18, 20)">30 Lakh / 20yr</button>
+        <button class="quick-fill-btn" onclick="fillEMI(5000000, 16, 15)">50 Lakh / 15yr</button>
+        <button class="quick-fill-btn" onclick="fillEMI(1500000, 22, 5)">15 Lakh / 5yr</button>
+        <button class="quick-fill-btn" onclick="fillEMI(800000, 20, 3)">8 Lakh / 3yr</button>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="loanAmount">Loan Amount (PKR)</label>
+          <input type="number" id="loanAmount" placeholder="e.g. 3000000" min="0">
+        </div>
+        <div class="form-group">
+          <label for="interestRate">Interest Rate (% per year)</label>
+          <input type="number" id="interestRate" placeholder="e.g. 18" min="0" max="100" step="0.01">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="loanTenure">Loan Tenure (Years)</label>
+        <input type="number" id="loanTenure" placeholder="e.g. 20" min="1" max="50">
+      </div>
+
+      <button class="btn" onclick="handleEMI()">Calculate EMI</button>
+
+      <div id="results" class="results">
+        <h3>Your EMI Breakdown</h3>
+        <div class="result-grid">
+          <div class="result-item">
+            <div class="label">Monthly EMI</div>
+            <div class="value" id="result-emi">—</div>
+          </div>
+          <div class="result-item">
+            <div class="label">Total Payment</div>
+            <div class="value" id="result-total">—</div>
+          </div>
+          <div class="result-item">
+            <div class="label">Total Interest</div>
+            <div class="value" id="result-interest">—</div>
+          </div>
+          <div class="result-item">
+            <div class="label">Interest as % of Principal</div>
+            <div class="value" id="result-interest-pct">—</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <h2>What Is EMI?</h2>
+      <p>EMI stands for Equated Monthly Installment. It is the fixed monthly payment you make to repay a loan over a set period. Each EMI includes both principal repayment and interest. In Pakistan, most home loans, car loans, and personal loans use the reducing balance method.</p>
+
+      <h2>EMI Formula</h2>
+      <p>The standard EMI formula is: EMI = P x r x (1+r)^n / ((1+r)^n - 1), where P is the principal, r is the monthly interest rate, and n is the number of months. This calculator uses that exact formula so your results match bank calculations.</p>
+
+      <h2>Factors That Affect Your EMI</h2>
+      <ul>
+        <li><strong>Loan amount:</strong> Higher principal means higher EMI.</li>
+        <li><strong>Interest rate:</strong> Pakistani bank rates vary from 15% to 25% depending on the loan type and your credit profile.</li>
+        <li><strong>Tenure:</strong> Longer tenure reduces EMI but increases total interest paid.</li>
+        <li><strong>Fixed vs floating rate:</strong> Some loans have variable rates that change over time.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <button class="faq-question">How accurate is this EMI calculator?</button>
+        <div class="faq-answer">This calculator uses the standard reducing balance EMI formula used by Pakistani banks. The results should match your bank's EMI calculation within a few rupees. Slight differences may occur due to rounding or processing fees.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What is the difference between fixed and reducing balance EMI?</button>
+        <div class="faq-answer">In reducing balance, interest is calculated on the outstanding principal, which decreases each month. Most Pakistani banks use the reducing balance method. Fixed rate EMI is calculated on the original principal, which costs more in total interest.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Can I prepay my loan to reduce EMI?</button>
+        <div class="faq-answer">Yes. Most Pakistani banks allow prepayment either to reduce EMI or shorten tenure. Check your bank's prepayment penalty policy before making extra payments.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What interest rate do Pakistani banks charge for home loans?</button>
+        <div class="faq-answer">Home loan rates in Pakistan typically range from 15% to 22% per annum, depending on the bank, loan amount, and your income profile. Always confirm the current rate directly with your bank.</div>
+      </div>
+
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How accurate is this EMI calculator?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "This calculator uses the standard reducing balance EMI formula used by Pakistani banks. The results should match your bank's EMI calculation within a few rupees."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between fixed and reducing balance EMI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In reducing balance, interest is calculated on the outstanding principal, which decreases each month. Most Pakistani banks use the reducing balance method."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I prepay my loan to reduce EMI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Most Pakistani banks allow prepayment either to reduce EMI or shorten tenure. Check your bank's prepayment penalty policy before making extra payments."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What interest rate do Pakistani banks charge for home loans?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Home loan rates in Pakistan typically range from 15% to 22% per annum, depending on the bank, loan amount, and your income profile."
+            }
+          }
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <h2>Related Calculators</h2>
+      <div class="cards-grid">
+        <a href="/home-loan-calculator/" class="card">
+          <div class="icon">&#9751;</div>
+          <h3>Home Loan Calculator</h3>
+          <p>Plan your home purchase with down payment and EMI breakdown.</p>
+        </a>
+        <a href="/compound-interest-calculator/" class="card">
+          <div class="icon">&#8634;</div>
+          <h3>Compound Interest Calculator</h3>
+          <p>See how your savings grow over time with compound interest.</p>
+        </a>
+        <a href="/salary-tax-calculator/" class="card">
+          <div class="icon">&#8377;</div>
+          <h3>Salary Tax Calculator 2026</h3>
+          <p>Find your take-home pay after Pakistan income tax deductions.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/emi-calculator/">EMI Calculator</a></li>
+        <li><a href="/salary-tax-calculator/">Salary Tax Calculator</a></li>
+        <li><a href="/compound-interest-calculator/">Compound Interest</a></li>
+        <li><a href="/home-loan-calculator/">Home Loan Calculator</a></li>
+      </ul>
+      <p>PK FinCalcs &mdash; Free Pakistan financial calculators. Updated for 2026.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/calculators.js"></script>
+</body>
+</html>
