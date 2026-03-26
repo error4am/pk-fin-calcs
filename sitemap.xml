@@ -2,27 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://error4am.github.io/pk-fin-calcs/</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-26</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://error4am.github.io/pk-fin-calcs/emi-calculator/</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-26</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://error4am.github.io/pk-fin-calcs/compound-interest-calculator/</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-26</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://error4am.github.io/pk-fin-calcs/salary-tax-calculator/</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-26</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://error4am.github.io/pk-fin-calcs/home-loan-calculator/</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-26</lastmod>
     <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://error4am.github.io/pk-fin-calcs/site-map/</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://error4am.github.io/pk-fin-calcs/salary-tax-slabs-pakistan-2026/</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://error4am.github.io/pk-fin-calcs/how-emi-is-calculated-in-pakistan/</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.70</priority>
   </url>
 </urlset>
