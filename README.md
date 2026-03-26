@@ -20,17 +20,22 @@ A static SEO-first website offering free Pakistan-focused financial calculators 
 - `salary tax calculator 2026`
 - `compound interest calculator`
 - `home loan calculator`
+- `salary tax slabs pakistan 2026`
+- `how emi is calculated in pakistan`
 - Pakistan-specific variants of all above
 
 ## Current Pages
 
-1. **Homepage** — SEO hub linking to all calculators, FAQ with JSON-LD schema
+1. **Homepage** (`/`) — SEO hub linking to calculators and guide pages, FAQ + ItemList schema
 2. **EMI Calculator** (`/emi-calculator/`) — EMI for any loan in PKR, reducing balance formula
 3. **Salary Tax Calculator** (`/salary-tax-calculator/`) — Pakistan FBR salaried slabs FY 2025-2026
 4. **Compound Interest Calculator** (`/compound-interest-calculator/`) — monthly/quarterly/half-yearly/yearly compounding
 5. **Home Loan Calculator** (`/home-loan-calculator/`) — EMI with down payment breakdown
+6. **HTML Sitemap** (`/site-map/`) — crawlable index of all live pages
+7. **Salary Tax Slabs Guide** (`/salary-tax-slabs-pakistan-2026/`) — long-tail SEO page supporting salary tax intent
+8. **EMI Formula Guide** (`/how-emi-is-calculated-in-pakistan/`) — long-tail SEO page supporting EMI explainer intent
 
-Each page includes:
+Calculator pages include:
 - self-canonical
 - focused title + meta description
 - Open Graph + Twitter meta
@@ -38,7 +43,17 @@ Each page includes:
 - content section (formulas, explanations)
 - FAQ section with FAQPage JSON-LD schema
 - internal links to related calculators
+- breadcrumb navigation + `BreadcrumbList` schema
 - footer navigation
+
+Guide/support pages include:
+- self-canonical
+- focused title + meta description
+- Open Graph + Twitter meta
+- breadcrumb navigation + `BreadcrumbList` schema
+- explanatory content targeting long-tail informational queries
+- FAQ section with FAQPage JSON-LD schema where useful
+- internal CTA links back to relevant calculator pages
 
 ## Tech Stack
 
@@ -52,7 +67,7 @@ Each page includes:
 pk-fin-calcs/
 ├── index.html                          (homepage)
 ├── robots.txt                          (sitemap pointer)
-├── sitemap.xml                         (clean UTF-8, 5 URLs)
+├── sitemap.xml                         (clean UTF-8, current page inventory)
 ├── .gitignore
 ├── .github/workflows/deploy.yml        (GitHub Pages deploy)
 ├── assets/
@@ -61,7 +76,10 @@ pk-fin-calcs/
 ├── emi-calculator/index.html
 ├── compound-interest-calculator/index.html
 ├── salary-tax-calculator/index.html
-└── home-loan-calculator/index.html
+├── home-loan-calculator/index.html
+├── site-map/index.html
+├── salary-tax-slabs-pakistan-2026/index.html
+└── how-emi-is-calculated-in-pakistan/index.html
 ```
 
 ## Calculator Logic
@@ -77,6 +95,9 @@ pk-fin-calcs/
 - Sitemap has no BOM, clean UTF-8, starts at byte 1 with `<?xml`
 - canonical URLs point to `https://error4am.github.io/pk-fin-calcs/*`
 - robots.txt points to the sitemap
+- homepage includes `WebSite` and `ItemList` schema
+- calculator and guide pages use breadcrumb markup for stronger internal structure
+- HTML sitemap supports crawlability and internal linking
 
 ## Known Context
 
@@ -88,7 +109,7 @@ pk-fin-calcs/
 1. Submit sitemap in Google Search Console
 2. Monitor impressions/clicks in Search Console after 3-10 days
 3. Add more calculator pages: car loan, zakat, SIP, loan eligibility, PF, gratuity
-4. Add content/blog pages for long-tail keywords
+4. Add more content/blog pages for long-tail keywords around finance, tax, and loan intent in Pakistan
 5. Consider custom domain if traffic grows
 
 ## Deployment
